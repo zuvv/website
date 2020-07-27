@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ted Pro</title>
+  <style>
+
+/* css command to change html and body margins to 0*/
+html,body{
+margin:0;
+padding:0;
+font-family:sans-serif;
+background:black;
+}
+
+.container{
+margin:100px auto;
+max-width: 1000px;
+background-color:rgba(35, 35, 37, 1);
+/*sets rows into columns
+https://the-echoplex.net/flexyboxes/
+*/
+display:flex;
+}
+
+/*left menu - flex grow, flex shrink, flex basis*/
+.menu{
+  flex:0 0 20px;
+}
+/*myFace and Name*/
+.photo{
+  flex:0 0 400px;
+}
+.photo img{
+  max-width:100%;
+  box-shadow:10px 10px 10px black;
+  margin-top:-20px;
+}
+.myName{
+  color:white;
+  margin-top:50px;
+  margin-left:50px;
+}
+
+/*right panel content bucket*/
+.content{
+  padding: 40px;
+  /*flex:1 1;*/
+}
+.content{
+  color:grey;
+}
+.aboutMe{}
+.aboutMe p strong{
+    color:white;
+    font-size: 38px;
+}
+.stats{
+    color:rgba(120, 180, 130, 1);
+    font-size: 16px;
+}
+.stats i{
+    color:grey;
+}
+.aboutMeText{
+  font-size: 14px;
+}
+
+
+/* ------------myServices-------------- */
+.myServicesHeading{
+  color:white;
+  font-size: 24px;
+}
+.services{
+  display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 16px;
+}
+.service{}
+.service p strong{
+  font-size: 16px;
+  color:white;
+}
+.service p{
+  font-size: 14px;
+  line-height: 20px; /* 4px +12px + 4px */
+}
+
+/* ------------myProjects-------------- */
+
+.myProjectHeading{
+  color:white;
+  font-size: 24px;
+}
+.projects{
+  display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 16px;
+}
+.project p strong{
+  font-size: 16px;
+  color:white;
+}
+.project p{
+  font-size: 14px;
+  line-height: 20px; /* 4px +12px + 4px */
+}
+
+    </style>
+</head>
+<body>
+
+  <div class="container"><!--- about me ---->
+    <div class="menu"><!--- menu ---->
+      <a href="Games\ShipGame\ShipGame.html"><img src="Icons\gameIcon.png"></a>
+    </div>
+    <div class="photo"><!--- image ---->
+      <img src="myFace.jpg" alt="my face">
+       <div class="myName"><!--- my name ---->
+         <h1>Ted Protasiewicz</h1>
+       </div>
+
+    </div>
+    <div class="content"><!--- right panel ---->
+      <div class="aboutMe"><!--- about me ---->
+        <p><strong>about me</strong></p>
+        <p class="stats">33 years &nbsp;<i>/</i> &nbsp;Milwaukee &nbsp;<i>/</i> &nbsp;Freelance </p>
+        <p class="aboutMeText">
+          I started out doing IT work.
+          While in school for Electrical Engineering I taught beer and wine making.
+          Transistioned from Electrical Engineering to Computer Science.
+        </p>
+      </div>
+
+      <div class="myServicesHeading"><!--- my services header ---->
+        <hr>
+      </div>
+
+      <div class="services"><!--- services begin ---->
+        <div class="service"><!--- development ---->
+          <p><strong>app development</strong></p>
+          <p>
+            During my freelance CAD design I've started app development.
+            I've worked started two projects and brough them to a marketable state.
+          </p>
+        </div>
+        <div class="service"><!--- optimization ---->
+          <p><strong>languages</strong></p>
+          <p>
+            Java<br>
+            Javascript<br>
+            C<br>
+            Swift<br>
+            Python<br>
+            Allen Bradley PLC<br>
+          </p>
+        </div>
+        <div class="service"><!--- data base ---->
+          <p><strong>experience</strong></p>
+          <p>
+            Freelance CAD design<br>
+            Industrial Automation Enviroments<br>
+            Studied at UWM and MSOE<br>
+
+          </p>
+        </div>
+        <div class="service"><!--- data security ---->
+          <p><strong>contact</strong></p>
+          <p>ted.pro@gmail.com</p>
+          <p>414-736-3350</p>
+        </div>
+    </div><!--- services end ---->
+    <!--- game projects---->
+    <!--- add hobbies = biking, mead making, raspberry pi, weaving, cars---->
+    <!--- contact---->
+  </div>
+</div>
+
+
+</body>
+</html>
