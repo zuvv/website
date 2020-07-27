@@ -31,7 +31,7 @@ document.addEventListener('mouseup',function(evt){
 
 
 let size = 100;
-let size2 = 400;
+let size2 = 300;
 //let size = viewportHeight*.20;
 //let size2 = viewportHeight*.40;
 let myTunnel = false;
@@ -39,17 +39,17 @@ let myTunnel = false;
 function SpawnWall(){
   //x,y,width,height
   let obstacleTop = new Obstacle(canvas.width,0,100,size,'#2484E4');
-  let obstacleBottom = new Obstacle(canvas.width,canvas.height-size2,100,size2,'#2484E4');
+  let obstacleBottom = new Obstacle(canvas.width,canvas.height-size2+100,100,size2,'#2484E4');
 //score = 501
 //level 1
 if(score<=250){
   if(myTunnel==false&&size>=100){
     size=size+5;
     size2=size2-5;
-    if(size>=400){
+    if(size>=300){
       myTunnel=true;
     }
-  }else if(myTunnel&&size<=400){
+  }else if(myTunnel&&size<=300){
     size=size-5;
     size2=size2+5;
     if(size<=100){
@@ -57,29 +57,27 @@ if(score<=250){
     }
   }
   //level 2
-}else if(score>250&&score<=380){
+}else if(score>250&&score<=330){
 //colors break when on server?
     if(score%2){
       obstacleTop.setColor("#CCFF00");
       obstacleBottom.setColor("#CCFF00");
     }else{
-    //  obstacleTop.setColor("#FF9900");
-    //  obstacleBottom.setColor("#FF0099");
+      obstacleTop.setColor("#FF9900");
+      obstacleBottom.setColor("#FF0099");
     }
 
     gameSpeed += 0.3;
     size += 1;
     size2 += 1;
-}else if(score>380&&score<=500){
+}else if(score>330&&score<=500){
   if(score%2){
-  //  obstacleTop.setColor("#CCFF00")
-  //  obstacleBottom.setColor("#CCFF00")
+    obstacleTop.setColor("#000000")
+    obstacleBottom.setColor("#000000")
   }else{
-  //  obstacleTop.setColor("#FF9900")
-  //  obstacleBottom.setColor("#FF0099")
+    obstacleTop.setColor("#FF9900")
+    obstacleBottom.setColor("#FF0099")
   }
-
-
   size-=1;
   size2+=1;
 
